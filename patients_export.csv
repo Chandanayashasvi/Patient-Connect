@@ -1,0 +1,22 @@
+patient_id,name,age,gender,contact_info
+1,ashmika,45,female,456555847
+2,Patient 2,35,Male,555-1002
+3,Patient 3,66,Male,555-1003
+4,Patient 4,62,Female,555-1004
+5,Patient 5,39,Female,555-1005
+6,Patient 6,27,Male,555-1006
+7,Patient 7,79,Female,555-1007
+8,Patient 8,24,Male,555-1008
+9,Patient 9,42,Male,555-1009
+10,Patient 10,40,Female,555-1010
+11,Patient 11,56,Female,555-1011
+12,Patient 12,69,Male,555-1012
+13,Patient 13,64,Female,555-1013
+14,Patient 14,52,Male,555-1014
+15,Patient 15,80,Female,555-1015
+16,Patient 16,23,Other,555-1016
+17,Patient 17,36,Other,555-1017
+18,Patient 18,57,Female,555-1018
+19,Patient 19,54,Male,555-1019
+20,Patient 20,63,Male,555-1020
+21,chandu,15,male,7569026799

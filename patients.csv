@@ -1,0 +1,39 @@
+Patient ID,First Name,Last Name,Clinic,Email,Phone,Date of Birth,Gender
+1,Morgan,Jones,CityCare Clinic,donnamassey@example.com,557-502-2210x484,1993-02-15,F
+2,Melinda,Carpenter,CityCare Clinic,millerabigail@example.org,697-559-7946x73094,1990-10-07,Other
+3,Michelle,Yoder,CityCare Clinic,michelle39@example.com,897.604.4706,1967-10-08,F
+4,Michelle,Harris,CityCare Clinic,jesse22@example.org,344.254.5178x77455,1979-11-14,M
+5,Gabriella,Dawson,CityCare Clinic,elizabeth96@example.net,645.634.2793,1963-01-15,M
+6,Marc,Hall,CityCare Clinic,william10@example.com,3222346950,1947-01-26,M
+7,Linda,Bond,CityCare Clinic,adamsbrian@example.com,686.860.5701x284,2000-05-04,F
+8,Michael,Garcia,CityCare Clinic,michael41@example.net,001-965-208-9957x3363,1970-02-14,M
+9,Carla,Murray,CityCare Clinic,michelle04@example.com,(809)638-9817x509,1986-04-10,F
+10,Tami,Bauer,CityCare Clinic,lindsey20@example.com,344.486.0527x61302,1969-06-07,M
+11,Lindsay,Bennett,CityCare Clinic,kevin18@example.net,652-236-1945,1952-03-30,Other
+12,Chris,Payne,CityCare Clinic,lucasjennifer@example.net,(711)233-5410,1970-08-02,Other
+13,Kevin,Gibson,Northside Family Health,tramos@example.com,+1-423-548-2795x32252,1946-04-02,Other
+14,Monica,Smith,Northside Family Health,sandrajones@example.com,001-629-919-3386x340,1992-03-07,Other
+15,Laurie,Thompson,Northside Family Health,matthew57@example.net,4297395121,1989-12-27,M
+16,Ryan,Brown,Northside Family Health,lorilewis@example.org,2135313559,1999-03-25,M
+17,Emily,Kennedy,Northside Family Health,theresahampton@example.net,+1-690-946-4939,1978-10-16,M
+18,Christopher,Cruz,Northside Family Health,elizabethrhodes@example.org,(895)959-0412x0109,1971-02-21,F
+19,Allison,Ruiz,Northside Family Health,wesley16@example.com,998.366.2100x9649,1962-04-06,F
+20,Christy,Davis,Northside Family Health,dianajackson@example.com,498-690-3823,2002-04-05,M
+21,Thomas,Scott,Northside Family Health,michaeldaniels@example.net,001-344-487-7948,1995-05-28,F
+22,Angela,Knight,Northside Family Health,stephanie09@example.org,506-749-6906x42070,1989-09-24,Other
+23,Joseph,Smith,Northside Family Health,phillipsmelvin@example.com,303-501-4117,2007-02-23,Other
+24,Maria,Steele,Northside Family Health,perezsamuel@example.net,001-913-339-6464x0955,2003-08-28,Other
+25,Adam,Lewis,Sunrise Medical Group,rose33@example.net,3548702508,1985-10-15,Other
+26,Jamie,Lozano,Sunrise Medical Group,jeremy19@example.net,+1-274-432-3561,1995-02-15,M
+27,Brooke,Wong,Sunrise Medical Group,cookdanielle@example.com,472.732.1654x9049,1966-06-28,F
+28,Ariel,Mccormick,Sunrise Medical Group,brian72@example.com,771.740.6658x938,1993-11-28,F
+29,Anna,Arnold,Sunrise Medical Group,andrew90@example.net,4022018411,1993-02-22,Other
+30,Tammy,Murray,Sunrise Medical Group,kevinwright@example.org,922.638.8964,1959-02-22,M
+31,Albert,Johnson,Sunrise Medical Group,gmarquez@example.com,001-307-993-6686x0862,1973-07-17,F
+32,James,Mccall,Sunrise Medical Group,ellisdiana@example.org,+1-430-846-7727x1187,1972-01-23,Other
+33,Andrew,Serrano,Sunrise Medical Group,marilyn77@example.net,(593)483-3257x512,1964-07-23,F
+34,April,Dennis,Sunrise Medical Group,julieevans@example.com,(374)558-0284x66691,1980-10-09,Other
+35,Debbie,Nichols,Sunrise Medical Group,natashachan@example.net,+1-521-788-8083x7010,1956-11-20,Other
+36,Dustin,Morales,Sunrise Medical Group,teresa50@example.com,253.330.9681x6546,1948-12-05,F
+37,ch,ya,CityCare Clinic,ya@gmail.com,1234567891,2005-05-10,F
+38,allam,navya,CityCare Clinic,navya@gmail.com,1234567891,2006-02-05,F

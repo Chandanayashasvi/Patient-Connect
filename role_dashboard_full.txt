@@ -1,0 +1,570 @@
+﻿
+from login import login
+import patientconnect_cli
+import insurance_manager
+import eligibility_manager
+import audit_viewer
+
+
+# ============================================================
+# PATIENT MANAGEMENT
+# ============================================================
+
+def patient_management(role):
+
+    while True:
+
+        print()
+        print("========================================")
+        print("        PATIENT MANAGEMENT")
+        print("========================================")
+        print("1. View Patients")
+        print("2. Search Patient")
+        print("3. View Clinics")
+        print("4. View Providers")
+
+        if role == "ADMIN":
+            print("5. Create Patient")
+            print("6. Back")
+        else:
+            print("5. Back")
+
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patientconnect_cli.view_patients()
+
+        elif choice == "2":
+            patientconnect_cli.search_patient()
+
+        elif choice == "3":
+            patientconnect_cli.view_clinics()
+
+        elif choice == "4":
+            patientconnect_cli.view_providers()
+
+        elif choice == "5" and role == "ADMIN":
+            patientconnect_cli.create_patient()
+
+        elif choice == "6" and role == "ADMIN":
+            break
+
+        elif choice == "5" and role != "ADMIN":
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# APPOINTMENT MANAGEMENT
+# ============================================================
+
+def appointment_management(role):
+
+    while True:
+
+        print()
+        print("========================================")
+        print("      APPOINTMENT MANAGEMENT")
+        print("========================================")
+        print("1. View Appointments")
+        print("2. Patient Appointment History")
+        print("3. Provider Appointment Count")
+        print("4. Clinic Appointment Count")
+        print("5. Appointment Status Summary")
+
+        if role in ("ADMIN", "DOCTOR"):
+            print("6. Book Appointment")
+            print("7. Update Appointment Status")
+            print("8. Back")
+        else:
+            print("6. Back")
+
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patientconnect_cli.view_appointments()
+
+        elif choice == "2":
+            patientconnect_cli.patient_appointment_history()
+
+        elif choice == "3":
+            patientconnect_cli.provider_appointment_count()
+
+        elif choice == "4":
+            patientconnect_cli.clinic_appointment_count()
+
+        elif choice == "5":
+            patientconnect_cli.appointment_status_summary()
+
+        elif choice == "6" and role in ("ADMIN", "DOCTOR"):
+            patientconnect_cli.book_appointment()
+
+        elif choice == "7" and role in ("ADMIN", "DOCTOR"):
+            patientconnect_cli.update_appointment_status()
+
+        elif choice == "8" and role in ("ADMIN", "DOCTOR"):
+            break
+
+        elif choice == "6" and role == "STAFF":
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# REPORTS
+# ============================================================
+
+def reports_menu():
+
+    while True:
+
+        print()
+        print("========================================")
+        print("              REPORTS")
+        print("========================================")
+        print("1. Clinic Appointment Count")
+        print("2. Provider Appointment Count")
+        print("3. Appointment Status Summary")
+        print("4. Message Delivery Summary")
+        print("5. No-show Report")
+        print("6. Recall Candidates")
+        print("7. Due Reminders")
+        print("8. Appointment Status History")
+        print("9. Back")
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patientconnect_cli.clinic_appointment_count()
+
+        elif choice == "2":
+            patientconnect_cli.provider_appointment_count()
+
+        elif choice == "3":
+            patientconnect_cli.appointment_status_summary()
+
+        elif choice == "4":
+            patientconnect_cli.message_delivery_summary()
+
+        elif choice == "5":
+            patientconnect_cli.no_show_report()
+
+        elif choice == "6":
+            patientconnect_cli.recall_candidates()
+
+        elif choice == "7":
+            patientconnect_cli.due_reminders()
+
+        elif choice == "8":
+            patientconnect_cli.view_appointment_history()
+
+        elif choice == "9":
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# MESSAGES
+# ============================================================
+
+def messages_menu():
+
+    while True:
+
+        print()
+        print("========================================")
+        print("              MESSAGES")
+        print("========================================")
+        print("1. View Messages")
+        print("2. Message Delivery Summary")
+        print("3. Back")
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patientconnect_cli.view_messages()
+
+        elif choice == "2":
+            patientconnect_cli.message_delivery_summary()
+
+        elif choice == "3":
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# CLINICAL INFORMATION
+# ============================================================
+
+def clinical_menu():
+
+    while True:
+
+        print()
+        print("========================================")
+        print("        CLINICAL INFORMATION")
+        print("========================================")
+        print("1. View Conditions")
+        print("2. View Patient Conditions")
+        print("3. Recall Candidates")
+        print("4. Patient Appointment History")
+        print("5. Appointment Status History")
+        print("6. Back")
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patientconnect_cli.view_conditions()
+
+        elif choice == "2":
+            patientconnect_cli.view_patient_conditions()
+
+        elif choice == "3":
+            patientconnect_cli.recall_candidates()
+
+        elif choice == "4":
+            patientconnect_cli.patient_appointment_history()
+
+        elif choice == "5":
+            patientconnect_cli.view_appointment_history()
+
+        elif choice == "6":
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# INSURANCE
+# ============================================================
+
+def insurance_menu(user):
+
+    try:
+        insurance_manager.insurance_menu(user)
+
+    except TypeError:
+        insurance_manager.insurance_menu()
+
+    except Exception as e:
+        print()
+        print("âŒ Insurance error:", e)
+        input("Press Enter to continue...")
+
+
+# ============================================================
+# ELIGIBILITY
+# ============================================================
+
+def eligibility_menu(user):
+
+    try:
+        eligibility_manager.eligibility_menu(user)
+
+    except TypeError:
+        eligibility_manager.eligibility_menu()
+
+    except Exception as e:
+        print()
+        print("âŒ Eligibility error:", e)
+        input("Press Enter to continue...")
+
+
+# ============================================================
+# AUDIT LOGS
+# ============================================================
+
+def audit_logs_menu():
+
+    try:
+        audit_viewer.view_audit_logs()
+
+    except Exception as e:
+        print()
+        print("âŒ Audit log error:", e)
+        input("Press Enter to continue...")
+
+
+# ============================================================
+# EXPORT PATIENTS
+# ============================================================
+
+def export_patients():
+
+    print()
+    print("========================================")
+    print("          EXPORT PATIENTS")
+    print("========================================")
+
+    try:
+        patientconnect_cli.export_patients_csv()
+
+    except Exception as e:
+        print()
+        print("âŒ Export error:", e)
+        input("Press Enter to continue...")
+
+
+# ============================================================
+# ADMIN DASHBOARD
+# ============================================================
+
+def admin_dashboard(user):
+
+    while True:
+
+        print()
+        print("========================================")
+        print("           ADMIN DASHBOARD")
+        print("========================================")
+        print("1. Patient Management")
+        print("2. Appointment Management")
+        print("3. Reports")
+        print("4. Messages")
+        print("5. Clinical Information")
+        print("6. Export Patients")
+        print("7. Insurance")
+        print("8. Eligibility")
+        print("9. Audit Logs")
+        print("10. Open Full PatientConnect")
+        print("11. Logout")
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patient_management("ADMIN")
+
+        elif choice == "2":
+            appointment_management("ADMIN")
+
+        elif choice == "3":
+            reports_menu()
+
+        elif choice == "4":
+            messages_menu()
+
+        elif choice == "5":
+            clinical_menu()
+
+        elif choice == "6":
+            export_patients()
+
+        elif choice == "7":
+            insurance_menu(user)
+
+        elif choice == "8":
+            eligibility_menu(user)
+
+        elif choice == "9":
+            audit_logs_menu()
+
+        elif choice == "10":
+            patientconnect_cli.main()
+
+        elif choice == "11":
+            print()
+            print("Logging out...")
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# DOCTOR DASHBOARD
+# ============================================================
+
+def doctor_dashboard(user):
+
+    while True:
+
+        print()
+        print("========================================")
+        print("           DOCTOR DASHBOARD")
+        print("========================================")
+        print("1. Patients")
+        print("2. Appointments")
+        print("3. Clinical Information")
+        print("4. Messages")
+        print("5. Reports")
+        print("6. Insurance")
+        print("7. Eligibility")
+        print("8. Open Full PatientConnect")
+        print("9. Logout")
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patient_management("DOCTOR")
+
+        elif choice == "2":
+            appointment_management("DOCTOR")
+
+        elif choice == "3":
+            clinical_menu()
+
+        elif choice == "4":
+            messages_menu()
+
+        elif choice == "5":
+            reports_menu()
+
+        elif choice == "6":
+            insurance_menu(user)
+
+        elif choice == "7":
+            eligibility_menu(user)
+
+        elif choice == "8":
+            patientconnect_cli.main()
+
+        elif choice == "9":
+            print()
+            print("Logging out...")
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# STAFF DASHBOARD
+# ============================================================
+
+def staff_dashboard(user):
+
+    while True:
+
+        print()
+        print("========================================")
+        print("            STAFF DASHBOARD")
+        print("========================================")
+        print("1. Patients")
+        print("2. Appointments")
+        print("3. Messages")
+        print("4. Due Reminders")
+        print("5. Clinic Information")
+        print("6. Insurance")
+        print("7. Eligibility")
+        print("8. Open Full PatientConnect")
+        print("9. Logout")
+        print("========================================")
+
+        choice = input("Select option: ").strip()
+
+        if choice == "1":
+            patient_management("STAFF")
+
+        elif choice == "2":
+            appointment_management("STAFF")
+
+        elif choice == "3":
+            messages_menu()
+
+        elif choice == "4":
+            patientconnect_cli.due_reminders()
+
+        elif choice == "5":
+
+            while True:
+
+                print()
+                print("========================================")
+                print("        CLINIC INFORMATION")
+                print("========================================")
+                print("1. View Clinics")
+                print("2. View Providers")
+                print("3. Back")
+                print("========================================")
+
+                sub_choice = input("Select option: ").strip()
+
+                if sub_choice == "1":
+                    patientconnect_cli.view_clinics()
+
+                elif sub_choice == "2":
+                    patientconnect_cli.view_providers()
+
+                elif sub_choice == "3":
+                    break
+
+                else:
+                    print("âŒ Invalid option.")
+
+        elif choice == "6":
+            insurance_menu(user)
+
+        elif choice == "7":
+            eligibility_menu(user)
+
+        elif choice == "8":
+            patientconnect_cli.main()
+
+        elif choice == "9":
+            print()
+            print("Logging out...")
+            break
+
+        else:
+            print("âŒ Invalid option.")
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def main():
+
+    user = login()
+
+    if user is None:
+        return
+
+    role = str(user.get("role", "")).upper()
+
+    print()
+    print("========================================")
+    print("       PATIENT CONNECT DASHBOARD")
+    print("========================================")
+    print("User :", user.get("username", "Unknown"))
+    print("Role :", role)
+    print("========================================")
+
+    if role == "ADMIN":
+        admin_dashboard(user)
+
+    elif role == "DOCTOR":
+        doctor_dashboard(user)
+
+    elif role == "STAFF":
+        staff_dashboard(user)
+
+    else:
+        print("âŒ Unknown role:", role)
+
+
+# ============================================================
+# START PROGRAM
+# ============================================================
+
+if __name__ == "__main__":
+    main()
+
